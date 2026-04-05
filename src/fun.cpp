@@ -1,13 +1,13 @@
 // Copyright 2022 UNN-IASR
 #include "fun.h"
-
+using namespace std;
 unsigned int faStr1(const char *str) {
     if (str == nullptr) return 0;
     unsigned int count = 0;
     bool inWord = false;
     bool hasDigit = false;
     while (*str) {
-        if (std::isspace(*str)) {
+        if (isspace(*str)) {
             if (inWord && !hasDigit) {
                 count++;
             }
@@ -18,7 +18,7 @@ unsigned int faStr1(const char *str) {
                 inWord = true;
                 hasDigit = false;
             }
-            if (std::isdigit(*str)) {
+            if (isdigit(*str)) {
                 hasDigit = true;
             }
         }
@@ -37,7 +37,7 @@ unsigned int faStr2(const char *str) {
     bool validWord = true;
     int charIndex = 0;
     while (*str) {
-        if (std::isspace(*str)) {
+        if (isspace(*str)) {
             if (inWord && validWord) {
                 count++;
             }
@@ -78,7 +78,7 @@ unsigned int faStr3(const char *str) {
     unsigned int currentLength = 0;
     bool inWord = false;
     while (*str) {
-        if (std::isspace(*str)) {
+        if (isspace(*str)) {
             if (inWord) {
                 totalLength += currentLength;
                 wordCount++;
@@ -100,5 +100,5 @@ unsigned int faStr3(const char *str) {
     }
     if (wordCount == 0) return 0;
     double average = static_cast<double>(totalLength) / wordCount;
-    return static_cast<unsigned int>(std::round(average));
+    return static_cast<unsigned int>(round(average));
 }
