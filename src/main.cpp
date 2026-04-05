@@ -1,5 +1,5 @@
 // Copyright 2022 UNN-IASR
-#include <iosream>
+#include <iostream>
 #include "fun.h"
 
 int main() {
