@@ -3,7 +3,7 @@
 #include "fun.h"
 
 int main() {
-    char* myStr = "sdf1 fsdf5sdfs gslll adfvs";
+    char* str = "sdf1 fsdf5sdfs gslll adfvs";
     std::cout << str << "\n";
     std::cout << "функция 1: " << faStr1(str) << "\n";
     std::cout << "функция 2: " << faStr2(str) << "\n";
